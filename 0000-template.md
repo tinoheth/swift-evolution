@@ -7,6 +7,8 @@
 
 ## Introduction
 
+Using method cascades for builders
+
 A short description of what the feature is. Try to keep it to a
 single-paragraph "elevator pitch" so the reader understands what
 problem this proposal is addressing.  
@@ -14,6 +16,21 @@ problem this proposal is addressing.
 Swift-evolution thread: [link to the discussion thread for that proposal](https://lists.swift.org/pipermail/swift-evolution)
 
 ## Motivation
+
+Groovy builders had a big impact on Ceylon and Kotlin, so the feature seems important.
+
+let page = HTML(). {
+  body.{
+    table.{
+      tr.{
+        td.{
+          text("Cell content")
+        }
+      }
+    }
+    div(style: "").text("Some text")
+  }
+}
 
 Describe the problems that this proposal seeks to address. If the
 problem is that some common pattern is currently hard to express, show
